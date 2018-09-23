@@ -1,0 +1,13 @@
+<input *ngIf="this.getInputType()==='hidden'; else notHiddenFieldBlock"
+  [attr.name]="name" type="hidden" [formControl]="control">
+<ng-template #notHiddenFieldBlock>
+    <pa-input
+        [name]="name"
+        [type]="this.getInputType()"
+        [id]="id"
+        [formControl]="control"
+        [placeholder]="schema.placeholder"
+        [help]="schema.description"
+        [isReadOnly]="schema.readOnly">{{ schema.title }}</pa-input>
+    <input *ngIf="schema.readOnly" [attr.name]="name" type="hidden" [formControl]="control">
+</ng-template>

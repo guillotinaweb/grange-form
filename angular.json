@@ -120,6 +120,46 @@
           }
         }
       }
+    },
+    "pastanaga": {
+      "root": "projects/pastanaga",
+      "sourceRoot": "projects/pastanaga/src",
+      "projectType": "library",
+      "prefix": "nsfp",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pastanaga/tsconfig.lib.json",
+            "project": "projects/pastanaga/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/pastanaga/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pastanaga/src/test.ts",
+            "tsConfig": "projects/pastanaga/tsconfig.spec.json",
+            "karmaConfig": "projects/pastanaga/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pastanaga/tsconfig.lib.json",
+              "projects/pastanaga/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "nsf-pastanaga"
