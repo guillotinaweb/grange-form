@@ -9,6 +9,7 @@ nsf-pastanaga implements the [Pastanaga UI](https://github.com/plone/pastanaga-a
 ```
 npm install -g mr-developer
 npm install
+mrdeveloper
 ```
 
 To serve locally:
