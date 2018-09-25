@@ -22,6 +22,9 @@
             ],
             "ngx-schema-form": [
                 "develop/ngx-schema-form/projects/schema-form/src/lib"
+            ],
+            "pastanaga": [
+                "projects/pastanaga/src/public_api"
             ]
         }
     }
