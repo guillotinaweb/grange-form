@@ -10,11 +10,12 @@ export class AppComponent {
         title: 'Moby Dick',
         language: ['fr'],
         theme: 'humor',
+        body: '<b>Love</b> is in the air'
     };
     schema: any = {
         fieldsets: [
             {
-                fields: ['title', 'description', 'moreInfo', 'age'],
+                fields: ['title', 'description', 'body', 'moreInfo', 'age'],
                 id: 'default',
                 title: 'Default',
             },
@@ -30,6 +31,12 @@ export class AppComponent {
                 title: 'Summary',
                 type: 'string',
                 widget: 'textarea',
+            },
+            body: {
+                title: 'Body',
+                type: 'string',
+                description: 'Rich text to write everything',
+                widget: 'richtext'
             },
             title: {
                 description: '',

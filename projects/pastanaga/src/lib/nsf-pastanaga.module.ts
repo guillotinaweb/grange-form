@@ -5,6 +5,7 @@ import { ControlsModule, TextFieldModule } from 'pastanaga-angular';
 import {
     PastanagaStringWidget,
     PastanagaTextareaWidget,
+    PastanagaRichtextWidget,
     PastanagaSelectWidget,
     PastanagaRadioWidget,
     PastanagaCheckboxWidget,
@@ -15,6 +16,7 @@ import {
 const WIDGETS = [
     PastanagaStringWidget,
     PastanagaTextareaWidget,
+    PastanagaRichtextWidget,
     PastanagaSelectWidget,
     PastanagaRadioWidget,
     PastanagaCheckboxWidget,
