@@ -6,7 +6,7 @@ import {
     RadioWidget,
     CheckboxWidget,
     ButtonWidget,
-    RichtextWidget,
+    ControlWidget,
 } from 'ngx-schema-form';
 import { Selectable, ControlModel } from 'pastanaga-angular';
 
@@ -93,4 +93,4 @@ export class PastanagaButtonWidget extends ButtonWidget {}
     selector: 'pa-nsf-richtext-widget',
     templateUrl: './richtext.widget.html',
   })
-  export class PastanagaRichtextWidget extends RichtextWidget {}
+  export class PastanagaRichtextWidget extends ControlWidget {}
