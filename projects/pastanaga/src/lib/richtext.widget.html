@@ -1,9 +1,8 @@
 <pa-richtext ngDefaultControl
-    [(editorModel)]="value"
-    [editorOptions]="{'toolbar': {'buttons': ['bold', 'italic', 'underline', 'h1', 'h2', 'h3']}}"
+    [editorOptions]="{'toolbar': {'buttons': ['bold', 'italic', 'underline', 'h1', 'h2', 'h3', 'quote', 'anchor', 'removeFormat', 'html', 'orderedlist']}}"
     [name]="name"
     [id]="id"
     [formControl]="control"
     [placeholder]="schema.placeholder"
     [help]="schema.description"
-    [isReadOnly]="schema.readOnly">{{ schema.title }}</pa-richtext>
+    [isReadOnly]="schema.readOnly">{{ value }}</pa-richtext>
