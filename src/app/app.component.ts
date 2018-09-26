@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     model: any = {
         title: 'Moby Dick',
+        description: 'A good book',
         language: ['fr'],
         theme: 'humor',
         body: '<b>Love</b> is in the air'
