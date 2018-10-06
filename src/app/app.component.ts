@@ -8,18 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
     model: any = {
         title: 'Moby Dick',
+        description: 'A good book',
         language: ['fr'],
         theme: 'humor',
+        body: '<b>Love</b> is in the air'
     };
     schema: any = {
         fieldsets: [
             {
-                fields: ['title', 'description', 'moreInfo', 'age'],
+                fields: ['title', 'description', 'body', 'moreInfo', 'age'],
                 id: 'default',
                 title: 'Default',
             },
             {
-                fields: ['author', 'language', 'theme', 'categories'],
+                fields: ['author', 'contributors', 'language', 'theme', 'categories'],
                 id: 'settings',
                 title: 'Settings',
             },
@@ -31,6 +33,12 @@ export class AppComponent {
                 type: 'string',
                 widget: 'textarea',
             },
+            body: {
+                title: 'Body',
+                type: 'string',
+                description: 'Rich text to write everything',
+                widget: 'richtext'
+            },
             title: {
                 description: '',
                 title: 'Title',
@@ -40,6 +48,15 @@ export class AppComponent {
                 description: '',
                 title: 'Author',
                 type: 'string',
+            },
+            contributors: {
+              title: 'Contributors',
+              description: 'Credits',
+              type: 'array',
+              items: {
+                type: 'string'
+              },
+              widget: 'array',
             },
             age: {
               description: '',

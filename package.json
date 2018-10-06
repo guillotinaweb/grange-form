@@ -7,8 +7,7 @@
     "build": "ng build",
     "build_demo": "ng build --prod --base-href /nsf-pastanaga/dist/nsf-pastanaga/",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +24,7 @@
     "@ngx-translate/http-loader": "^3.0.1",
     "angular-svg-icon": "^6.0.0",
     "core-js": "^2.5.4",
+    "medium-editor": "5.23.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.2",
     "z-schema": "^3.17.0",
@@ -47,7 +47,7 @@
     "karma-coverage-istanbul-reporter": "~1.4.2",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^3.0.0-rc.2",
+    "ng-packagr": "^4.2.0",
     "protractor": "~5.4.1",
     "ts-node": "~5.0.1",
     "tsickle": ">=0.25.5",

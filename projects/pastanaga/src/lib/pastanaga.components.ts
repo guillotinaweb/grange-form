@@ -6,6 +6,8 @@ import {
     RadioWidget,
     CheckboxWidget,
     ButtonWidget,
+    ControlWidget,
+    ArrayWidget,
 } from 'ngx-schema-form';
 import { Selectable, ControlModel } from 'pastanaga-angular';
 
@@ -86,3 +88,15 @@ export class PastanagaBooleanWidget extends CheckboxWidget {
   templateUrl: './button.widget.html',
 })
 export class PastanagaButtonWidget extends ButtonWidget {}
+
+@Component({
+    selector: 'pa-nsf-richtext-widget',
+    templateUrl: './richtext.widget.html',
+  })
+  export class PastanagaRichtextWidget extends ControlWidget {}
+
+  @Component({
+    selector: 'pa-nsf-array-widget',
+    templateUrl: './array.widget.html',
+  })
+  export class PastanagaArrayWidget extends ArrayWidget {}
