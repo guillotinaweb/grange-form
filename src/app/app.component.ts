@@ -21,7 +21,7 @@ export class AppComponent {
                 title: 'Default',
             },
             {
-                fields: ['author', 'language', 'theme', 'categories'],
+                fields: ['author', 'contributors', 'language', 'theme', 'categories'],
                 id: 'settings',
                 title: 'Settings',
             },
@@ -48,6 +48,15 @@ export class AppComponent {
                 description: '',
                 title: 'Author',
                 type: 'string',
+            },
+            contributors: {
+              title: 'Contributors',
+              description: 'Credits',
+              type: 'array',
+              items: {
+                type: 'string'
+              },
+              widget: 'array',
             },
             age: {
               description: '',

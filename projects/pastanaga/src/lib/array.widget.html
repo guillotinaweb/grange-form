@@ -1,0 +1,12 @@
+<div class="o-field" [class.o-field-error]="!!errorHelp">
+  <label class="o-field-label" [for]="id" translate>
+      {{ schema.title }}
+  </label>
+  <small *ngIf="!!schema.description" class="o-field-help">{{ schema.description | translate }}</small>
+  <div *ngFor="let itemProperty of formProperty.properties" style="display: flex;">
+    <sf-form-element [formProperty]="itemProperty" style="width: 100%"></sf-form-element>
+    <pa-button color="destructive" icon="delete" size="small"
+    (click)="removeItem(itemProperty)">Remove</pa-button>
+  </div>
+  <pa-button color="primary" size="small" icon="add" (click)="addItem()">Add</pa-button>
+</div>

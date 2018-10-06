@@ -8,6 +8,7 @@ import {
     PastanagaBooleanWidget,
     PastanagaButtonWidget,
     PastanagaRichtextWidget,
+    PastanagaArrayWidget,
 } from './pastanaga.components';
 
 export class PastanagaWidgetRegistry extends DefaultWidgetRegistry {
@@ -31,6 +32,7 @@ export class PastanagaWidgetRegistry extends DefaultWidgetRegistry {
         this.register('radio', PastanagaRadioWidget);
         this.register('boolean', PastanagaBooleanWidget);
         this.register('checkbox', PastanagaCheckboxWidget);
+        this.register('array', PastanagaArrayWidget);
 
         this.register('button', PastanagaButtonWidget);
 
