@@ -1,4 +1,6 @@
 <pa-select ngDefaultControl [formControl]="control"
     [placeholder]="schema.placeholder"
     [help]="schema.description"
-    [options]="options">{{ schema.title }}</pa-select>
+    [label]="schema.title">
+    <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
+</pa-select>

@@ -1,13 +1,15 @@
-<input *ngIf="this.getInputType()==='hidden'; else notHiddenFieldBlock"
+<input *ngIf="this.schema.widget.id ==='hidden'; else notHiddenFieldBlock"
   [attr.name]="name" type="hidden" [formControl]="control">
 <ng-template #notHiddenFieldBlock>
     <pa-input
         [name]="name"
-        [type]="this.getInputType()"
+        [type]="!this.schema.widget.id || this.schema.widget.id === 'string' ? 'text' : this.schema.widget.id"
         [id]="id"
         [formControl]="control"
         [placeholder]="schema.placeholder"
         [help]="schema.description"
+        [required]="schema.required"
+        [disabled]="schema.disabled"
         [isReadOnly]="schema.readOnly">{{ schema.title }}</pa-input>
     <input *ngIf="schema.readOnly" [attr.name]="name" type="hidden" [formControl]="control">
 </ng-template>
