@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
     StringWidget,
     TextAreaWidget,
@@ -9,7 +9,7 @@ import {
     ControlWidget,
     ArrayWidget,
 } from 'ngx-schema-form';
-import { Selectable, ControlModel } from 'pastanaga-angular';
+import { ControlModel } from 'pastanaga-angular';
 
 @Component({
     selector: 'pa-nsf-string-widget',
@@ -28,7 +28,7 @@ export class PastanagaTextareaWidget extends TextAreaWidget {}
     templateUrl: './select.widget.html',
 })
 export class PastanagaSelectWidget extends SelectWidget implements OnInit {
-    options: Selectable[];
+    options: {id: string, name: string}[];
 
     ngOnInit() {
         const options =
