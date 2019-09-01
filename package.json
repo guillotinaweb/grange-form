@@ -1,11 +1,11 @@
 {
-  "name": "nsf-pastanaga",
+  "name": "grange-form",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build_demo": "ng build --prod --base-href /nsf-pastanaga/dist/nsf-pastanaga/",
+    "build_demo": "ng build --prod --base-href /grange-form/dist/grange-form/",
     "test": "ng test",
     "lint": "ng lint"
   },
@@ -24,6 +24,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "angular-svg-icon": "^7.2.1",
     "core-js": "^2.5.4",
+    "jexl": "^2.1.1",
     "medium-editor": "5.23.3",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.3.3",

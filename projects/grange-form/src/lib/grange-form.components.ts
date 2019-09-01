@@ -12,22 +12,22 @@ import {
 import { ControlModel } from 'pastanaga-angular';
 
 @Component({
-    selector: 'pa-nsf-string-widget',
+    selector: 'gf-string-widget',
     templateUrl: './string.widget.html',
 })
-export class PastanagaStringWidget extends StringWidget {}
+export class GrangeFormStringWidget extends StringWidget {}
 
 @Component({
-    selector: 'pa-nsf-textarea-widget',
+    selector: 'gf-textarea-widget',
     templateUrl: './textarea.widget.html',
 })
-export class PastanagaTextareaWidget extends TextAreaWidget {}
+export class GrangeFormTextareaWidget extends TextAreaWidget {}
 
 @Component({
-    selector: 'pa-nsf-select-widget',
+    selector: 'gf-select-widget',
     templateUrl: './select.widget.html',
 })
-export class PastanagaSelectWidget extends SelectWidget implements OnInit {
+export class GrangeFormSelectWidget extends SelectWidget implements OnInit {
     options: {id: string, name: string}[];
 
     ngOnInit() {
@@ -43,10 +43,10 @@ export class PastanagaSelectWidget extends SelectWidget implements OnInit {
 }
 
 @Component({
-    selector: 'pa-nsf-radio-widget',
+    selector: 'gf-radio-widget',
     templateUrl: './radio.widget.html',
 })
-export class PastanagaRadioWidget extends RadioWidget implements OnInit {
+export class GrangeFormRadioWidget extends RadioWidget implements OnInit {
     checkboxes: ControlModel[];
 
     ngOnInit() {
@@ -58,10 +58,10 @@ export class PastanagaRadioWidget extends RadioWidget implements OnInit {
 }
 
 @Component({
-    selector: 'pa-nsf-checkbox-widget',
+    selector: 'gf-checkbox-widget',
     templateUrl: './checkbox.widget.html',
 })
-export class PastanagaCheckboxWidget extends CheckboxWidget implements OnInit {
+export class GrangeFormCheckboxWidget extends CheckboxWidget implements OnInit {
     checkboxes: ControlModel[];
 
     ngOnInit() {
@@ -73,10 +73,10 @@ export class PastanagaCheckboxWidget extends CheckboxWidget implements OnInit {
 }
 
 @Component({
-    selector: 'pa-nsf-boolean-widget',
+    selector: 'gf-boolean-widget',
     templateUrl: './boolean.widget.html',
 })
-export class PastanagaBooleanWidget extends CheckboxWidget {
+export class GrangeFormBooleanWidget extends CheckboxWidget {
 
     setValue($event) {
         this.control.setValue($event);
@@ -84,19 +84,19 @@ export class PastanagaBooleanWidget extends CheckboxWidget {
 }
 
 @Component({
-  selector: 'pa-nsf-button-widget',
+  selector: 'gf-button-widget',
   templateUrl: './button.widget.html',
 })
-export class PastanagaButtonWidget extends ButtonWidget {}
+export class GrangeFormButtonWidget extends ButtonWidget {}
 
 @Component({
-    selector: 'pa-nsf-richtext-widget',
+    selector: 'gf-richtext-widget',
     templateUrl: './richtext.widget.html',
   })
-  export class PastanagaRichtextWidget extends ControlWidget {}
+  export class GrangeFormRichtextWidget extends ControlWidget {}
 
   @Component({
-    selector: 'pa-nsf-array-widget',
+    selector: 'gf-array-widget',
     templateUrl: './array.widget.html',
   })
-  export class PastanagaArrayWidget extends ArrayWidget {}
+  export class GrangeFormArrayWidget extends ArrayWidget {}

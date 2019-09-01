@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nsf-pastanaga": {
+    "grange-form": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nsf-pastanaga",
+            "outputPath": "dist/grange-form",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nsf-pastanaga:build"
+            "browserTarget": "grange-form:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nsf-pastanaga:build:production"
+              "browserTarget": "grange-form:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nsf-pastanaga:build"
+            "browserTarget": "grange-form:build"
           }
         },
         "test": {
@@ -104,38 +104,38 @@
         }
       }
     },
-    "pastanaga": {
-      "root": "projects/pastanaga",
-      "sourceRoot": "projects/pastanaga/src",
+    "grange-form-lib": {
+      "root": "projects/grange-form",
+      "sourceRoot": "projects/grange-form/src",
       "projectType": "library",
       "prefix": "nsfp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/pastanaga/tsconfig.lib.json",
-            "project": "projects/pastanaga/ng-package.json"
+            "tsConfig": "projects/grange-form/tsconfig.lib.json",
+            "project": "projects/grange-form/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/pastanaga/ng-package.prod.json"
+              "project": "projects/grange-form/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/pastanaga/src/test.ts",
-            "tsConfig": "projects/pastanaga/tsconfig.spec.json",
-            "karmaConfig": "projects/pastanaga/karma.conf.js"
+            "main": "projects/grange-form/src/test.ts",
+            "tsConfig": "projects/grange-form/tsconfig.spec.json",
+            "karmaConfig": "projects/grange-form/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/pastanaga/tsconfig.lib.json",
-              "projects/pastanaga/tsconfig.spec.json"
+              "projects/grange-form/tsconfig.lib.json",
+              "projects/grange-form/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -145,5 +145,5 @@
       }
     }
   },
-  "defaultProject": "nsf-pastanaga"
+  "defaultProject": "grange-form"
 }
