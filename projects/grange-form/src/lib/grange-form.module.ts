@@ -11,27 +11,27 @@ import {
 } from 'pastanaga-angular';
 
 import {
-    PastanagaStringWidget,
-    PastanagaTextareaWidget,
-    PastanagaRichtextWidget,
-    PastanagaSelectWidget,
-    PastanagaRadioWidget,
-    PastanagaCheckboxWidget,
-    PastanagaBooleanWidget,
-    PastanagaButtonWidget,
-    PastanagaArrayWidget,
-} from './pastanaga.components';
+    GrangeFormStringWidget,
+    GrangeFormTextareaWidget,
+    GrangeFormRichtextWidget,
+    GrangeFormSelectWidget,
+    GrangeFormRadioWidget,
+    GrangeFormCheckboxWidget,
+    GrangeFormBooleanWidget,
+    GrangeFormButtonWidget,
+    GrangeFormArrayWidget,
+} from './grange-form.components';
 
 const WIDGETS = [
-    PastanagaStringWidget,
-    PastanagaTextareaWidget,
-    PastanagaRichtextWidget,
-    PastanagaSelectWidget,
-    PastanagaRadioWidget,
-    PastanagaCheckboxWidget,
-    PastanagaBooleanWidget,
-    PastanagaButtonWidget,
-    PastanagaArrayWidget,
+    GrangeFormStringWidget,
+    GrangeFormTextareaWidget,
+    GrangeFormRichtextWidget,
+    GrangeFormSelectWidget,
+    GrangeFormRadioWidget,
+    GrangeFormCheckboxWidget,
+    GrangeFormBooleanWidget,
+    GrangeFormButtonWidget,
+    GrangeFormArrayWidget,
 ];
 @NgModule({
     imports: [
@@ -49,4 +49,4 @@ const WIDGETS = [
     entryComponents: WIDGETS,
     exports: WIDGETS,
 })
-export class NsfPastanagaModule {}
+export class GrangeFormModule {}

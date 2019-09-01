@@ -11,9 +11,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import {
-    NsfPastanagaModule,
-    PastanagaWidgetRegistry,
-} from '../../projects/pastanaga/src/public_api';
+    GrangeFormModule,
+    GrangeFormWidgetRegistry,
+} from '../../projects/grange-form/src/public_api';
 
 import { AppComponent } from './app.component';
 
@@ -25,8 +25,8 @@ export function createTranslateLoader(http: HttpClient) {
     declarations: [AppComponent],
     imports: [
         BrowserModule,
-        SchemaFormModule,
-        NsfPastanagaModule,
+        SchemaFormModule.forRoot(),
+        GrangeFormModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -36,7 +36,7 @@ export function createTranslateLoader(http: HttpClient) {
         }),
     ],
     providers: [
-        { provide: WidgetRegistry, useClass: PastanagaWidgetRegistry },
+        { provide: WidgetRegistry, useClass: GrangeFormWidgetRegistry },
         {
             provide: SchemaValidatorFactory,
             useClass: ZSchemaValidatorFactory,
