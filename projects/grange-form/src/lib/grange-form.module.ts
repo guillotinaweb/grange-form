@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
 import { SchemaFormModule } from 'ngx-schema-form';
 import {
     ControlsModule,
     TextFieldModule,
     ButtonModule,
     SvgModule,
+    RichtextModule,
 } from 'pastanaga-angular';
 
 import {
@@ -38,11 +38,11 @@ const WIDGETS = [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule,
         SchemaFormModule,
         ControlsModule,
         ButtonModule,
         TextFieldModule,
+        RichtextModule,
         SvgModule,
     ],
     declarations: WIDGETS,

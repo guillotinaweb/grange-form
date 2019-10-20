@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build grange-form --prod && cp ./README.md ./dist/grange-form",
     "build_demo": "ng build --prod --base-href /grange-form/dist/grange-form/",
     "test": "ng test",
+    "get_version": "cat ./projects/grange-form/package.json | grep version  | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]'",
     "lint": "ng lint"
   },
   "private": true,
@@ -20,8 +21,6 @@
     "@angular/platform-browser": "^8.0.3",
     "@angular/platform-browser-dynamic": "^8.0.3",
     "@angular/router": "^8.0.3",
-    "@ngx-translate/core": "^11.0.0",
-    "@ngx-translate/http-loader": "^4.0.0",
     "angular-svg-icon": "^7.2.1",
     "core-js": "^2.5.4",
     "jexl": "^2.1.1",

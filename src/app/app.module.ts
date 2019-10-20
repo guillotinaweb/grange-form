@@ -7,8 +7,6 @@ import {
     SchemaValidatorFactory,
     ZSchemaValidatorFactory,
 } from 'ngx-schema-form';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import {
     GrangeFormModule,
@@ -17,23 +15,12 @@ import {
 
 import { AppComponent } from './app.component';
 
-export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
-
 @NgModule({
     declarations: [AppComponent],
     imports: [
         BrowserModule,
         SchemaFormModule.forRoot(),
         GrangeFormModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: createTranslateLoader,
-                deps: [HttpClient],
-            },
-        }),
     ],
     providers: [
         { provide: WidgetRegistry, useClass: GrangeFormWidgetRegistry },
