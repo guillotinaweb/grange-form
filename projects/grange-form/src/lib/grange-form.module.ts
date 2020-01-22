@@ -7,13 +7,11 @@ import {
     TextFieldModule,
     ButtonModule,
     SvgModule,
-    RichtextModule,
 } from 'pastanaga-angular';
 
 import {
     GrangeFormStringWidget,
     GrangeFormTextareaWidget,
-    GrangeFormRichtextWidget,
     GrangeFormSelectWidget,
     GrangeFormRadioWidget,
     GrangeFormCheckboxWidget,
@@ -25,7 +23,6 @@ import {
 const WIDGETS = [
     GrangeFormStringWidget,
     GrangeFormTextareaWidget,
-    GrangeFormRichtextWidget,
     GrangeFormSelectWidget,
     GrangeFormRadioWidget,
     GrangeFormCheckboxWidget,
@@ -42,7 +39,6 @@ const WIDGETS = [
         ControlsModule,
         ButtonModule,
         TextFieldModule,
-        RichtextModule,
         SvgModule,
     ],
     declarations: WIDGETS,

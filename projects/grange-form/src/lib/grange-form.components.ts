@@ -6,7 +6,6 @@ import {
     RadioWidget,
     CheckboxWidget,
     ButtonWidget,
-    ControlWidget,
     ArrayWidget,
 } from 'ngx-schema-form';
 import { ControlModel } from 'pastanaga-angular';
@@ -88,12 +87,6 @@ export class GrangeFormBooleanWidget extends CheckboxWidget {
   templateUrl: './button.widget.html',
 })
 export class GrangeFormButtonWidget extends ButtonWidget {}
-
-@Component({
-    selector: 'gf-richtext-widget',
-    templateUrl: './richtext.widget.html',
-  })
-  export class GrangeFormRichtextWidget extends ControlWidget {}
 
   @Component({
     selector: 'gf-array-widget',
