@@ -15,20 +15,20 @@ import { ControlModel } from 'pastanaga-angular';
     selector: 'gf-string-widget',
     templateUrl: './string.widget.html',
 })
-export class GrangeFormStringWidget extends StringWidget {}
+export class GrangeFormStringWidget extends StringWidget { }
 
 @Component({
     selector: 'gf-textarea-widget',
     templateUrl: './textarea.widget.html',
 })
-export class GrangeFormTextareaWidget extends TextAreaWidget {}
+export class GrangeFormTextareaWidget extends TextAreaWidget { }
 
 @Component({
     selector: 'gf-select-widget',
     templateUrl: './select.widget.html',
 })
 export class GrangeFormSelectWidget extends SelectWidget implements OnInit {
-    options: {id: string, name: string}[];
+    options: { id: string, name: string }[];
 
     ngOnInit() {
         const options =
@@ -84,19 +84,13 @@ export class GrangeFormBooleanWidget extends CheckboxWidget {
 }
 
 @Component({
-  selector: 'gf-button-widget',
-  templateUrl: './button.widget.html',
+    selector: 'gf-button-widget',
+    templateUrl: './button.widget.html',
 })
-export class GrangeFormButtonWidget extends ButtonWidget {}
+export class GrangeFormButtonWidget extends ButtonWidget { }
 
 @Component({
-    selector: 'gf-richtext-widget',
-    templateUrl: './richtext.widget.html',
-  })
-  export class GrangeFormRichtextWidget extends ControlWidget {}
-
-  @Component({
     selector: 'gf-array-widget',
     templateUrl: './array.widget.html',
-  })
-  export class GrangeFormArrayWidget extends ArrayWidget {}
+})
+export class GrangeFormArrayWidget extends ArrayWidget { }
