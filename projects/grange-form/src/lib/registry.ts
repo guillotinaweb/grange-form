@@ -7,7 +7,6 @@ import {
     GrangeFormCheckboxWidget,
     GrangeFormBooleanWidget,
     GrangeFormButtonWidget,
-    GrangeFormRichtextWidget,
     GrangeFormArrayWidget,
 } from './grange-form.components';
 
@@ -27,7 +26,6 @@ export class GrangeFormWidgetRegistry extends DefaultWidgetRegistry {
         this.register('integer', GrangeFormStringWidget);
         this.register('number', GrangeFormStringWidget);
         this.register('textarea', GrangeFormTextareaWidget);
-        this.register('richtext', GrangeFormRichtextWidget);
         this.register('select', GrangeFormSelectWidget);
         this.register('radio', GrangeFormRadioWidget);
         this.register('boolean', GrangeFormBooleanWidget);
