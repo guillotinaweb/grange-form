@@ -1,3 +1,7 @@
+# 1.0.3
+
+- Auto-tagging and auto-publish on NPM [ebrehault]
+
 # 1.0.2
 
 - Fixing PA dependency [bloodbare]

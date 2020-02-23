@@ -1,0 +1,37 @@
+language: node_js
+version: 1.0
+node_js:
+- 12.4.0
+cache:
+  directories:
+  - node_modules
+dist: trusty
+install:
+- npm install
+script:
+- npm run build
+notifications:
+  email:
+  - ebrehault@gmail.com
+before_deploy: if [[ $TRAVIS_TAG ]]; then cd dist/grange-form; else git config --global
+  user.email "build@travis-ci.com" && git config --global user.name "Travis CI" &&
+  export PACKAGE_VERSION=$(npm run get_version | tail -n 1) && echo "TAGGING $PACKAGE_VERSION..."
+  && git tag $PACKAGE_VERSION; fi
+deploy:
+  - provider: releases
+    api_key:
+      secure: R9hi4Vb1wlV91CrGmpJ8jZdksyQ3QxlEqJpa3xPyJ3k1tWEETYZqQBsNvj1iXY9mJsecqmUobIMMGxYfHuq0/mwyHO8jIb7AQ0WA/sRixN3EOSiYrv/YlbpQukDny94Q5964GFipaR3FTlk4dnj0ss1jfODwrknEkeKXc8qvJCjxE3eS04q9LqSSE3EL/QCbtTWPGR7GnOy075xTIVaNrvDVaAIg8E3+U9fEiJ0CIubnlqYT13YqIJWW7wjWcx8aA2Rh64nMRxm/WLZ0wiuhwReZJfiU1qDaEhNdY6mgXYZsXqGtg6dnVB+G6aQY08m6OY07h8yPH5z3Ps16PB49j1Y/cg+TSLTiwbuGj/xsgoAkoNi+9T/tHeWN2vN4rPjWj8lCu31srUeWTTxUwcABo0dtx7m4uEych19hZ9s6ZYK9HCFRuF3vuFIrZa6Pe5HUIhSamXGiIj8nEl3d23Ji5XmXWz+pKWtXrxWkyZyCOXlVLA61GBmSCrpHmcOwHdlR2BDgYht2ion8zAJUWMGmdMusPMdV9FHWtaZM47X4MpjEKogHhBuCpqK+BHvv7gRA2bwFnV2EI5wa0XclsIgustkPoQAZSjzRCekvWGa4VtPXaNrnuD1aV0QLMlNeBYZUv8svGVBBtXXFYn1OzkjhDphaJwF9IfSgEhWUD4xRsPc=
+    name: Build $PACKAGE_VERSION
+    on:
+      repo: guillotinaweb/grange-form
+      branch: master
+  - provider: npm
+    edge: true
+    email: ebrehault@gmail.com
+    skip_cleanup: true
+    api_key:
+      secure: w7wqsdUrH7rQF9dtOwO/Ocdksmf1iSHF/WOxHNVGN7IlJiu9/eWJMDyoBoUQ4MuHAhduV9yFNzxqhyeMp8jDXuOP03KANbncrJWjAhkDX5wOuL44q6kges5GFrhg04p0sHJ7wFnwQUYK3jgBZyAs/IkHWtJLCDFaKBeK0YwiI6WMzWWLuJv4FAUI9FdhBRTqQJhpHC8dVGQhJpie2nidaz15Age67KWUXwH9yGnSeAkvYLk2exoOEBvxpYY42k7yWacYLmn26K7eqUqcvJWGfj2Olm2AI6EOA3ppjkrGQ0ZU8ai5NGFpfuT+brtmwP9AdBoEhI9JS5oJc3lm696WzfJPP4IxRGTvzIxE+VmCLchivyRiFpSKd2CfkAG/SK6KBn69qCW4FGDRaSbZjlO72E88dUteVm2RCQFUD7kf+DkNbTFvMRqQ+ko4lw3Lfh5eBdOj0gz9FwmwuY4CSDDJpMM3EEbvRFPAhEh772llL56KsZhNDeE3wpHnpZAj1Bpu/tetot5HYZPF9IgfuPCMP/LLmQJ5lf2ZiHXkFoyQudUX5oj6rtSsEv/KVcsqR+2Z2NMVdEoOENRpo2sgxgCivnsSyeGwA7br/8OLUTyCKLayorbEjdFsycLFER6xGm41GmElyyo0bmED45t/UMwWgJjGgNTFYcLGCvv/oj+o+io=
+    on:
+      tags: true
+      repo: guillotinaweb/grange-form
+      branch: master
