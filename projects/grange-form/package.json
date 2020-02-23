@@ -5,8 +5,10 @@
   "peerDependencies": {
     "@angular/common": "^7.0.3",
     "@angular/core": "^7.0.3",
+    "@guillotinaweb/pastanaga-angular": "^1.11.0",
     "angular-traversal": "^1.2.7",
-    "date-fns": "^2.9.0"
+    "date-fns": "^2.9.0",
+    "ngx-schema-form": "^2.4.3"
   },
   "publishConfig": {
     "access": "public"

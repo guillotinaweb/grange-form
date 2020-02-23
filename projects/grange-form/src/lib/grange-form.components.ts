@@ -8,7 +8,7 @@ import {
     ButtonWidget,
     ArrayWidget,
 } from 'ngx-schema-form';
-import { ControlModel } from 'pastanaga-angular';
+import { ControlModel } from '@guillotinaweb/pastanaga-angular';
 
 @Component({
     selector: 'gf-string-widget',

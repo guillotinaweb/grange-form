@@ -1,5 +1,6 @@
 {
     "pastanaga-angular": {
+        "package": "@guillotinaweb/pastanaga-angular",
         "path": "/projects/pastanaga/src",
         "url": "git@github.com:plone/pastanaga-angular.git",
         "branch": "master"

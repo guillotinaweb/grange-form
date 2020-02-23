@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^8.0.3",
     "@angular/platform-browser-dynamic": "^8.0.3",
     "@angular/router": "^8.0.3",
+    "@guillotinaweb/pastanaga-angular": "^1.11.0",
     "angular-svg-icon": "^7.2.1",
     "angular-traversal": "^1.2.7",
     "core-js": "^2.5.4",
