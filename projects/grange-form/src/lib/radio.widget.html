@@ -1,3 +1,5 @@
-<pa-checkbox-tree ngDefaultControl [formControl]="control"
-    type="radio"
-    [checkboxes]="checkboxes">{{ schema.title }}</pa-checkbox-tree>
+<pa-checkbox-tree ngDefaultControl
+                  [formControl]="control"
+                  type="radio"
+                  [checkboxes]="checkboxes"
+                  (selection)="onSelection($event)">{{ schema.title }}</pa-checkbox-tree>

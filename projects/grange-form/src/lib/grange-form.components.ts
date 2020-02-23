@@ -6,10 +6,9 @@ import {
     RadioWidget,
     CheckboxWidget,
     ButtonWidget,
-    ControlWidget,
     ArrayWidget,
 } from 'ngx-schema-form';
-import { ControlModel } from 'pastanaga-angular';
+import { ControlModel } from '@guillotinaweb/pastanaga-angular';
 
 @Component({
     selector: 'gf-string-widget',
@@ -55,6 +54,10 @@ export class GrangeFormRadioWidget extends RadioWidget implements OnInit {
             label: option.description,
         }));
     }
+
+    onSelection(selection: string[]) {
+        this.formProperty.setValue(selection, false);
+    }
 }
 
 @Component({
@@ -69,6 +72,14 @@ export class GrangeFormCheckboxWidget extends CheckboxWidget implements OnInit {
             value: option.enum[0],
             label: option.description,
         }));
+    }
+
+    onSelection(selection: string[]) {
+        this.checked = selection.reduce((all, value) => {
+            all[value] = true;
+            return all;
+        }, {});
+        this.formProperty.setValue(Object.keys(this.checked), false);
     }
 }
 

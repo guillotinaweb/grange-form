@@ -7,7 +7,7 @@ import {
     TextFieldModule,
     ButtonModule,
     SvgModule,
-} from 'pastanaga-angular';
+} from '@guillotinaweb/pastanaga-angular';
 
 import {
     GrangeFormStringWidget,

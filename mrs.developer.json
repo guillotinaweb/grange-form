@@ -1,5 +1,6 @@
 {
     "pastanaga-angular": {
+        "package": "@guillotinaweb/pastanaga-angular",
         "path": "/projects/pastanaga/src",
         "url": "git@github.com:plone/pastanaga-angular.git",
         "branch": "master"
@@ -7,6 +8,6 @@
     "ngx-schema-form": {
         "path": "/projects/schema-form/src/lib",
         "url": "git@github.com:guillotinaweb/ngx-schema-form.git",
-        "branch": "issue-circular-dep"
+        "branch": "master"
     }
 }

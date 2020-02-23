@@ -12,6 +12,7 @@ import {
     GrangeFormModule,
     GrangeFormWidgetRegistry,
 } from '../../projects/grange-form/src/public_api';
+import * as en from '../assets/i18n/en.json';
 
 import { AppComponent } from './app.component';
 
@@ -28,6 +29,10 @@ import { AppComponent } from './app.component';
             provide: SchemaValidatorFactory,
             useClass: ZSchemaValidatorFactory,
         },
+        {provide: 'LANG', useValue: 'en_US'},
+        {provide: 'TRANSLATIONS', useValue: {
+            'en_US': {...en} as any,
+        }},
     ],
     bootstrap: [AppComponent],
 })
