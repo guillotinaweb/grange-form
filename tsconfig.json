@@ -19,6 +19,14 @@
         "lib": [
             "es2017",
             "dom"
-        ]
+        ],
+        "paths": {
+            "@guillotinaweb/pastanaga-angular": [
+                "develop/pastanaga-angular/projects/pastanaga/src"
+            ],
+            "ngx-schema-form": [
+                "develop/ngx-schema-form/projects/schema-form/src/lib"
+            ]
+        }
     }
 }

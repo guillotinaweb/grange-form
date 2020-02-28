@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import {
     SchemaFormModule,
     WidgetRegistry,
@@ -15,6 +14,7 @@ import {
 import * as en from '../assets/i18n/en.json';
 
 import { AppComponent } from './app.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
     declarations: [AppComponent],
@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
         BrowserModule,
         SchemaFormModule.forRoot(),
         GrangeFormModule,
+        AngularSvgIconModule.forRoot(),
     ],
     providers: [
         { provide: WidgetRegistry, useClass: GrangeFormWidgetRegistry },
