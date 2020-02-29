@@ -1,14 +1,14 @@
 {
   "name": "@guillotinaweb/grange-form",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^7.0.3",
-    "@angular/core": "^7.0.3",
-    "@guillotinaweb/pastanaga-angular": "^1.11.0",
-    "angular-traversal": "^1.2.7",
+    "@angular/common": "^9.0.4",
+    "@angular/core": "^9.0.4",
+    "@guillotinaweb/pastanaga-angular": "^1.12.3",
+    "angular-traversal": "^1.4.3",
     "date-fns": "^2.9.0",
-    "ngx-schema-form": "^2.4.3"
+    "ngx-schema-form": "^2.5.0"
   },
   "publishConfig": {
     "access": "public"

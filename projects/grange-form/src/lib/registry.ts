@@ -9,7 +9,9 @@ import {
     GrangeFormButtonWidget,
     GrangeFormArrayWidget,
 } from './grange-form.components';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class GrangeFormWidgetRegistry extends DefaultWidgetRegistry {
     constructor() {
         super();

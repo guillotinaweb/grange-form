@@ -1,3 +1,7 @@
+# 1.1.0
+
+- Upgrade to Angular 9 [ebrehault]
+
 # 1.0.3
 
 - Auto-tagging and auto-publish on NPM [ebrehault]
