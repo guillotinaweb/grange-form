@@ -29,7 +29,7 @@ jobs:
           tags: true
     - stage: NPM release
       if: tag IS present
-      before_deploy: cd dist/traversal
+      before_deploy: cd dist/grange-form
       deploy:
         provider: npm
         edge: true
