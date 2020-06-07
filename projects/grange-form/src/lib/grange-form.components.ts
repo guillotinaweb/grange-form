@@ -49,7 +49,8 @@ export class GrangeFormRadioWidget extends RadioWidget implements OnInit {
     checkboxes: ControlModel[];
 
     ngOnInit() {
-        this.checkboxes = this.schema.oneOf.map(option => ({
+        this.checkboxes = this.schema.oneOf.map(option => new ControlModel({
+            id: option.enum[0],
             value: option.enum[0],
             label: option.description,
         }));
@@ -68,7 +69,8 @@ export class GrangeFormCheckboxWidget extends CheckboxWidget implements OnInit {
     checkboxes: ControlModel[];
 
     ngOnInit() {
-        this.checkboxes = this.schema.items.oneOf.map(option => ({
+        this.checkboxes = this.schema.items.oneOf.map(option => new ControlModel({
+            id: option.enum[0],
             value: option.enum[0],
             label: option.description,
         }));

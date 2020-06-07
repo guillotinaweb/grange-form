@@ -1,3 +1,7 @@
+# 1.1.2 (2020-06-07)
+
+- Fix checkboxes [ebrehault]
+
 # 1.1.1 (2020-05-03)
 
 - Fix path issues in bundle and use pa-checkbox-group instead of tree [ebrehault]
