@@ -1,0 +1,32 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "src",
+        "downlevelIteration": true,
+        "importHelpers": true,
+        "module": "es2020",
+        "outDir": "./dist/out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "target": "es2015",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "paths": {
+            "@guillotinaweb/pastanaga-angular": [
+                "develop/pastanaga-angular/projects/pastanaga/src"
+            ],
+            "ngx-schema-form": [
+                "develop/ngx-schema-form/projects/schema-form/src/lib"
+            ]
+        }
+    }
+}
