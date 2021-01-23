@@ -1,3 +1,7 @@
+# 1.1.4 (2021-01-27)
+
+- Upgrade to Angular 10
+
 # 1.1.3 (2020-07-26)
 
 - Upgrade to Angular 10
